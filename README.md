@@ -8,7 +8,7 @@
 #### 2. [TipeR](https://github.com/Cylis-Dragneel/TipeR)
 - A Text Edior based on Kilo but implemented in Rust
 
-#### 3. [Placeholder]
+#### 3. [Solarix](https://github.com/Cylis-Dragneel/Solarix)
 - A Download utility written in Rust
 
 #### 4. Minimal OS (Planned)
