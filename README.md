@@ -5,7 +5,7 @@
 #### 1. [Dragneel-TextEditor](https://github.com/Cylis-Dragneel/drg)
 - A Text Editor that is based on Kilo, written in C
 
-#### 2. [Placeholder]
+#### 2. [TipeR](https://github.com/Cylis-Dragneel/TipeR)
 - A Text Edior based on Kilo but implemented in Rust
 
 #### 3. [Placeholder]
