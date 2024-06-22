@@ -2,4 +2,14 @@ body {
     background-color: #333; /* dark gray background */
     color: #FFC5C5; /* light red text color */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color
+}
+  a:link {
+    color: #00698f; /* change the color to a blue-ish tone */
+  }
+  a:visited {
+    color: #663399; /* change the color to a purple-ish tone */
+  }
+  a:hover {
+    color: #ff69b4; /* change the color to a pink-ish tone on hover */
   }
