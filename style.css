@@ -1,15 +1,85 @@
-body {
-    background-color: #333; /* dark gray background */
-    color: #FFC5C5; /* light red text color */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color
+:root {
+  --base0: #1e1e2e;
+  --mantle: #181825;
+  --surface0: #313244;
+  --surface1: #45475a;
+  --surface2: #585b70;
+  --textc: #cdd6f4;
+  --rosewater: #f5e0dc;
+  --lavender: #b4befe;
+  --red: #f38ba8;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --blue: #89b4fa;
+  --mauve: #cba6f7;
+  --flamingo: #f2cdcd;
 }
-  a:link {
-    color: #00698f; /* change the color to a blue-ish tone */
-  }
-  a:visited {
-    color: #663399; /* change the color to a purple-ish tone */
-  }
-  a:hover {
-    color: #ff69b4; /* change the color to a pink-ish tone on hover */
-  }
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface0);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  margin: 0 0 0 100px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #9999a8;
+}
+
+h3 {
+  font-size: 16px;
+  color: #9999a855;
+}
+
+a:link {
+  color: var(--blue);
+}
+
+a:visited {
+  color: var(--mauve);
+}
+
+a:hover {
+  color: var(--rosewater);
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+  height: 100%;
+  background-color: var(--surface1);
+  color: var(--textc);
+}
+
+.box {
+  padding: 20px;
+}
+
+.side {
+  display: flex;
+  flex-flow: column;
+  gap: 20px;
+  list-style-type: none;
+}
+
+.side > * {
+  flex: 1 0;
+}
