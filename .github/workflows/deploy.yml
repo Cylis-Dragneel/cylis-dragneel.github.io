@@ -5,11 +5,19 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# Add these permissions
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
@@ -29,7 +37,8 @@ jobs:
           cp public/* dist/
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages
+          branch: main
           folder: dist
+          token: ${{ secrets.GITHUB_TOKEN }}
