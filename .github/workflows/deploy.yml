@@ -39,8 +39,8 @@ jobs:
 
       - name: Copy Files
         run: |
-          mkdir -p dist
-          cp -r public/* dist/
+          mkdir -p build
+          cp -r public/* build/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
