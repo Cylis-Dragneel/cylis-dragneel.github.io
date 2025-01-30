@@ -37,10 +37,19 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Debug - List directories
+        run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "Public directory contents (if exists):"
+          ls -la public || echo "Public directory not found"
+
       - name: Copy Files
         run: |
           mkdir -p build
           cp -r public/* build/
+          echo "Build directory contents:"
+          ls -la build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
