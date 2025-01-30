@@ -1,0 +1,11 @@
+{
+  "name": "my-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website",
+  "scripts": {
+    "start": "http-server public -c-1 --no-cache"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
