@@ -6,6 +6,19 @@
   --text-primary: #ffffff;
   --text-secondary: #b8c0d9;
   --card-background: #2a2d4f;
+  
+  /* Skill category colors */
+  --language-color: #2ecc71;    /* Green */
+  --tech-color: #3498db;        /* Blue */
+  --creative-color: #e74c3c;    /* Red */
+  --hobby-color: #f1c40f;       /* Yellow */
+  
+  /* Project tag colors */
+  --tag-python: #3776ab;        /* Python Blue */
+  --tag-go: #00add8;           /* Go Blue */
+  --tag-web: #e34c26;          /* HTML Red */
+  --tag-terminal: #4caf50;     /* Terminal Green */
+  --tag-api: #f9a825;          /* API Yellow */
 }
 
 [data-theme="light"] {
@@ -129,6 +142,7 @@ h2 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: var(--primary-color);
+  text-align: center;
 }
 
 /* Skills */
@@ -160,6 +174,35 @@ h2 {
   transition: width 1s ease;
 }
 
+/* Skills Section Updates */
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Skill progress bar colors based on category */
+.skill-item[data-category="language"] .skill-progress {
+  background: var(--language-color);
+}
+
+.skill-item[data-category="tech"] .skill-progress {
+  background: var(--tech-color);
+}
+
+.skill-item[data-category="creative"] .skill-progress {
+  background: var(--creative-color);
+}
+
+.skill-item[data-category="hobby"] .skill-progress {
+  background: var(--hobby-color);
+}
+
 /* Projects */
 .projects-grid {
   display: grid;
@@ -189,12 +232,44 @@ h2 {
 }
 
 .project-tech span {
-  background: var(--primary-color);
-  color: white;
   padding: 0.25rem 0.75rem;
   border-radius: 15px;
   font-size: 0.9rem;
+  color: white;
   display: inline-block;
+}
+
+.project-tech span:nth-child(3n+1) {
+  background: var(--tag-python);
+}
+
+.project-tech span:nth-child(3n+2) {
+  background: var(--tag-go);
+}
+
+.project-tech span:nth-child(3n+3) {
+  background: var(--tag-web);
+}
+
+/* Specific tag colors based on content */
+.project-tech span:contains("Python") {
+  background: var(--tag-python);
+}
+
+.project-tech span:contains("Go") {
+  background: var(--tag-go);
+}
+
+.project-tech span:contains("Web") {
+  background: var(--tag-web);
+}
+
+.project-tech span:contains("Terminal") {
+  background: var(--tag-terminal);
+}
+
+.project-tech span:contains("API") {
+  background: var(--tag-api);
 }
 
 /* Contact */
@@ -265,4 +340,34 @@ footer {
   .projects-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* About Section Updates */
+.bio {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.bio p {
+  line-height: 1.8;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.status-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
+
+.status {
+  background: var(--card-background);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  display: inline-block;
 }
