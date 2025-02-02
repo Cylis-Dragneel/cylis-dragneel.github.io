@@ -28,21 +28,28 @@ document.addEventListener("DOMContentLoaded", () => {
   typeWriter();
 
   // Skill Bars Animation
-  const skillBars = document.querySelectorAll(".skill-progress");
-
-  const observerOptions = {
-    threshold: 0.5,
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+  const skillsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.width = entry.target.parentElement.dataset.progress;
+        const progressBar = entry.target;
+        const width = progressBar.getAttribute('data-width') || progressBar.style.width;
+        progressBar.style.width = width;
+        progressBar.classList.add('animate');
+        skillsObserver.unobserve(progressBar);
       }
     });
-  }, observerOptions);
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px'
+  });
 
-  skillBars.forEach((bar) => observer.observe(bar));
+  // Initialize skill bars
+  document.querySelectorAll('.skill-progress').forEach(bar => {
+    const targetWidth = bar.style.width;
+    bar.setAttribute('data-width', targetWidth);
+    bar.style.width = targetWidth;
+    skillsObserver.observe(bar);
+  });
 
   // Smooth Scrolling
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {

@@ -277,32 +277,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              const progressBar = entry.target;
-              const width = progressBar.getAttribute('data-width') || progressBar.style.width;
-              progressBar.style.width = width;
-              progressBar.classList.add('animate');
-              observer.unobserve(progressBar);
-            }
-          });
-        }, {
-          threshold: 0.1,
-          rootMargin: '0px'
-        });
-
-        // Set up each progress bar
-        document.querySelectorAll('.skill-progress').forEach(bar => {
-          // Store the target width as a data attribute
-          const targetWidth = bar.style.width;
-          bar.setAttribute('data-width', targetWidth);
-          bar.style.width = targetWidth;
-          observer.observe(bar);
-        });
-      });
-    </script>
   </body>
 </html>
