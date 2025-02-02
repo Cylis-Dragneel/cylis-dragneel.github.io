@@ -169,9 +169,16 @@ h2 {
 
 .skill-progress {
   height: 100%;
+  width: 0;
   background: var(--primary-color);
   border-radius: 5px;
-  transition: width 1s ease;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 1s ease-out;
+}
+
+.skill-progress.animate {
+  transform: scaleX(1);
 }
 
 /* Skills Section Updates */
