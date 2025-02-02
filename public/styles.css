@@ -282,8 +282,12 @@ h2 {
 /* Contact */
 .contact-content {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  max-width: 100%;
 }
 
 .contact-link {
@@ -294,6 +298,11 @@ h2 {
   align-items: center;
   gap: 0.5rem;
   transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.contact-link i {
+  font-size: 1.2rem;
 }
 
 .contact-link:hover {
@@ -346,6 +355,22 @@ footer {
 
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+
+  .contact-content {
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .contact-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+  .contact-content {
+    gap: 1.2rem;
   }
 }
 
