@@ -163,7 +163,7 @@ h2 {
 /* Projects */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
 }
 
@@ -178,6 +178,23 @@ h2 {
 
 .project-card:hover {
   transform: translateY(-5px);
+}
+
+/* Add these new styles for project tech tags */
+.project-tech {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tech span {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  display: inline-block;
 }
 
 /* Contact */
