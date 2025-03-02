@@ -6,19 +6,17 @@
   --text-primary: #ffffff;
   --text-secondary: #b8c0d9;
   --card-background: #2a2d4f;
-  
-  /* Skill category colors */
-  --language-color: #2ecc71;    /* Green */
-  --tech-color: #3498db;        /* Blue */
-  --creative-color: #e74c3c;    /* Red */
-  --hobby-color: #f1c40f;       /* Yellow */
-  
-  /* Project tag colors */
-  --tag-python: #3776ab;        /* Python Blue */
-  --tag-go: #00add8;           /* Go Blue */
-  --tag-web: #e34c26;          /* HTML Red */
-  --tag-terminal: #4caf50;     /* Terminal Green */
-  --tag-api: #f9a825;          /* API Yellow */
+
+  --language-color: #2ecc71;
+  --tech-color: #3498db;
+  --creative-color: #e74c3c;
+  --hobby-color: #f1c40f;
+
+  --tag-python: #3776ab;
+  --tag-go: #00add8;
+  --tag-web: #e34c26;
+  --tag-terminal: #4caf50;
+  --tag-api: #f9a825;
 }
 
 [data-theme="light"] {
@@ -246,15 +244,15 @@ h2 {
   display: inline-block;
 }
 
-.project-tech span:nth-child(3n+1) {
+.project-tech span:nth-child(3n + 1) {
   background: var(--tag-python);
 }
 
-.project-tech span:nth-child(3n+2) {
+.project-tech span:nth-child(3n + 2) {
   background: var(--tag-go);
 }
 
-.project-tech span:nth-child(3n+3) {
+.project-tech span:nth-child(3n + 3) {
   background: var(--tag-web);
 }
 
