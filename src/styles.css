@@ -17,6 +17,7 @@
   --tag-web: #e34c26;
   --tag-terminal: #4caf50;
   --tag-api: #f9a825;
+
 }
 
 [data-theme="light"] {
@@ -158,25 +159,29 @@ h2 {
   color: var(--text-secondary);
 }
 
+/* Skill progress bars */
 .skill-bar {
   height: 10px;
   background: var(--card-background);
   border-radius: 5px;
   overflow: hidden;
+  position: relative;
 }
 
 .skill-progress {
   height: 100%;
-  width: 0;
-  background: var(--primary-color);
   border-radius: 5px;
   transform-origin: left;
-  transform: scaleX(0);
+  transform: scaleX(0); /* Start with scale 0 */
   transition: transform 1s ease-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* This is important */
 }
 
 .skill-progress.animate {
-  transform: scaleX(1);
+  transform: scaleX(1); /* Animate to full width */
 }
 
 /* Skills Section Updates */
@@ -228,7 +233,7 @@ h2 {
   transform: translateY(-5px);
 }
 
-/* Add these new styles for project tech tags */
+/* Project tags styling */
 .project-tech {
   margin-top: 1rem;
   display: flex;
@@ -244,37 +249,42 @@ h2 {
   display: inline-block;
 }
 
-.project-tech span:nth-child(3n + 1) {
+/* Tech tag specific colors */
+.project-tech span[data-tech="python"] {
   background: var(--tag-python);
 }
 
-.project-tech span:nth-child(3n + 2) {
-  background: var(--tag-go);
-}
-
-.project-tech span:nth-child(3n + 3) {
-  background: var(--tag-web);
-}
-
-/* Specific tag colors based on content */
-.project-tech span:contains("Python") {
+.project-tech span[data-tech="django"] {
   background: var(--tag-python);
 }
 
-.project-tech span:contains("Go") {
-  background: var(--tag-go);
-}
-
-.project-tech span:contains("Web") {
+.project-tech span[data-tech="web-development"] {
   background: var(--tag-web);
 }
 
-.project-tech span:contains("Terminal") {
+.project-tech span[data-tech="c"] {
+  background: var(--tag-python);
+}
+
+.project-tech span[data-tech="unix"],
+.project-tech span[data-tech="terminal"] {
   background: var(--tag-terminal);
 }
 
-.project-tech span:contains("API") {
+.project-tech span[data-tech="go"] {
+  background: var(--tag-go);
+}
+
+.project-tech span[data-tech="tui"] {
+  background: var(--tag-terminal);
+}
+
+.project-tech span[data-tech="api-integration"] {
   background: var(--tag-api);
+}
+
+.project-tech span[data-tech="view-repository"] {
+  background: var(--tag-web);
 }
 
 /* Contact */
@@ -400,4 +410,53 @@ footer {
   font-size: 0.9rem;
   color: var(--primary-color);
   display: inline-block;
+}
+
+/* Navigation Styles */
+.site-nav {
+  background-color: var(--card-background);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.site-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.site-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--primary-color);
+}
+
+.site-nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.site-nav a:hover::after,
+.site-nav a.active::after {
+  width: 100%;
 }
