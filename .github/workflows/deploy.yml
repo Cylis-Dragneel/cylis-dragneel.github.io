@@ -40,6 +40,11 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Copy blogs
+        run: |
+          mkdir -p dist/blog
+          cp -r public/blog/* dist/blog
+
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v4

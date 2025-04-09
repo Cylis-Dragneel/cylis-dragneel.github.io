@@ -1,0 +1,40 @@
+{
+  "posts": [
+    {
+      "id": "dororo-review-anicord-winter-2025",
+      "title": "Dororo Review - Anicord Winter 2025",
+      "date": "2025-04-12",
+      "author": "Cylis",
+      "summary": "Review of Dororo- My Challenge contract for the Anicord Winter 2025 season.",
+      "tags": ["Anime", "Review"],
+      "available": true
+    },
+    {
+      "id": "scrcpy",
+      "title": "Scrcpy - The Best Android Screen Mirroring Tool",
+      "date": "2024-03-15",
+      "author": "Cylis",
+      "summary": "Scrcpy is a free and open-source application that allows you to control and view your Android device from your computer.",
+      "tags": ["Android", "Screen Mirroring", "Open Source"],
+      "available": true
+    },
+    {
+      "id": "dororo-review-anicord-winter-2024",
+      "title": "Dororo Review - Anicord Winter 2024",
+      "date": "2024-04-12",
+      "author": "Cylis",
+      "summary": "Review of Dororo- My Challenge contract for the Anicord Winter 2024 season.",
+      "tags": ["Anime", "Review"],
+      "available": false
+    },
+    {
+      "id": "sample-post",
+      "title": "Sample Blog Post",
+      "author": "Cylis",
+      "date": "2023-01-15",
+      "summary": "This is a sample blog post to demonstrate the blog functionality.",
+      "tags": ["sample", "markdown", "blog"],
+      "available": true
+    }
+  ]
+}
