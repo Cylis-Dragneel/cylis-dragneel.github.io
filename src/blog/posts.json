@@ -9,5 +9,14 @@
       "tags": ["Anime", "Review"],
       "available": true
     },
+    {
+      "id": "scrcpy",
+      "title": "Scrcpy - The Best Android Screen Mirroring Tool",
+      "date": "2024-03-15",
+      "author": "Cylis",
+      "summary": "Scrcpy is a free and open-source application that allows you to control and view your Android device from your computer.",
+      "tags": ["Android", "Screen Mirroring", "Open Source"],
+      "available": true
+    },
   ]
 }
