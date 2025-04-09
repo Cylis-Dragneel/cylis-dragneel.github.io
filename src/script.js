@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     typeWriter();
   }
 
+  // REMOVED: Skill Bars Animation (now in skills-animation.js)
 
   // Smooth Scrolling
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
