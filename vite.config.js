@@ -12,8 +12,6 @@ export default defineConfig({
         blog: resolve(__dirname, "src/blog.html"),
         blogPost: resolve(__dirname, "src/blog-post.html"),
         comingSoon: resolve(__dirname, "src/coming-soon.html"),
-        scripts: resolve(__dirname, "src/script.js"),
-        css: resolve(__dirname, "src/styles.css"),
       },
     },
     // Ensure assets are correctly handled
