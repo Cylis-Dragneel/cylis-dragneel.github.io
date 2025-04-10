@@ -45,6 +45,15 @@ jobs:
           mkdir -p dist/blog
           cp -r public/blog/* dist/blog
 
+      - name: Debugging
+        run: |
+          echo "Current directory: $(pwd)"
+          echo "Contents of dist directory:"
+          ls -la dist
+          echo "Contents of public and blog directories:"
+          ls -la public/blog
+          ls -la dist/blog
+
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'
         uses: actions/configure-pages@v4
