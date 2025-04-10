@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       
       // Check if post should redirect
       if (post.available === false) {
-        window.location.href = `coming-soon.html?title=${encodeURIComponent(post.title)}&id=${encodeURIComponent(post.id)}`;
+        window.location.href = `/coming-soon.html?title=${encodeURIComponent(post.title)}&id=${encodeURIComponent(post.id)}`;
         return;
       }
       
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const markdownExists = await checkPostExistence(postId);
       
       if (!markdownExists) {
-        window.location.href = `coming-soon.html?title=${encodeURIComponent(post.title)}&id=${encodeURIComponent(post.id)}`;
+        window.location.href = `/coming-soon.html?title=${encodeURIComponent(post.title)}&id=${encodeURIComponent(post.id)}`;
         return;
       }
       
