@@ -51,8 +51,8 @@ jobs:
           echo "Contents of dist directory:"
           ls -la dist
           ls -la dist/blog
-          ls -la assets
-          ls -la assets/js
+          ls -la dist/assets
+          ls -la dist/assets/js
 
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'
