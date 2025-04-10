@@ -49,10 +49,9 @@ jobs:
         run: |
           echo "Current directory: $(pwd)"
           echo "Contents of dist directory:"
-          ls -la dist
-          echo "Contents of public and blog directories:"
-          ls -la public/blog
-          ls -la dist/blog
+          ls -Tla dist
+          echo "Contents of public directory:"
+          ls -Tla public
 
       - name: Setup Pages
         if: github.ref == 'refs/heads/main'

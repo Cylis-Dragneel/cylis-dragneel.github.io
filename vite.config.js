@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { resolve } from 'path';
+import { resolve } from "path";
 
 export default defineConfig({
   root: "src",
@@ -8,9 +8,10 @@ export default defineConfig({
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'src/index.html'),
-        blog: resolve(__dirname, 'src/blog.html'),
-        blogPost: resolve(__dirname, 'src/blog-post.html'),
+        main: resolve(__dirname, "src/index.html"),
+        blog: resolve(__dirname, "src/blog.html"),
+        blogPost: resolve(__dirname, "src/blog-post.html"),
+        comingSoon: resolve(__dirname, "src/coming-soon.html"),
       },
     },
     // Ensure assets are correctly handled
@@ -18,10 +19,10 @@ export default defineConfig({
   },
   // Copy any static assets that shouldn't be processed
   publicDir: "../public",
-  server: { 
+  server: {
     open: true,
     fs: {
-      allow: ['..']
-    }
+      allow: [".."],
+    },
   },
 });
