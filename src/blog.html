@@ -1,60 +1,66 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Cylis - Blog</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <title>Cylis - Blog</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>" />
-</head>
-
-<body>
-  <!-- Theme Toggle -->
-  <div class="theme-switch">
-    <input type="checkbox" id="theme-toggle" class="theme-input" />
-    <label for="theme-toggle" class="toggle-label">
-      <i class="fas fa-sun"></i>
-      <i class="fas fa-moon"></i>
-      <span class="toggle-ball"></span>
-    </label>
-  </div>
-
-  <!-- Navigation -->
-  <nav class="site-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#skills">Skills</a></li>
-      <li><a href="index.html#projects">Projects</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
-      <li><a href="index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Blog Section -->
-  <section class="section blog-section">
-    <h2>Blog</h2>
-    <div class="blog-container">
-      <!-- Blog posts will be populated here via JavaScript -->
-      <div id="blog-list" class="blog-list">
-        <div class="loading">Loading blog posts...</div>
-      </div>
+  <body>
+    <!-- Theme Toggle -->
+    <div class="theme-switch">
+      <input type="checkbox" id="theme-toggle" class="theme-input" />
+      <label for="theme-toggle" class="toggle-label">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+        <span class="toggle-ball"></span>
+      </label>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Cylis. Last updated: 2025-01-30</p>
-  </footer>
+    <!-- Navigation -->
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script type="module" src="script.js"></script>
-  <script type="module" src="assets/js/blog.js"></script>
-</body>
+    <!-- Blog Section -->
+    <section class="section blog-section">
+      <h2>Blog</h2>
+      <div class="blog-container">
+        <!-- Blog posts will be populated here via JavaScript -->
+        <div id="blog-list" class="blog-list">
+          <div class="loading">Loading blog posts...</div>
+        </div>
+      </div>
+    </section>
 
+    <footer>
+      <p>© 2025 Cylis. Last updated: 2025-01-30</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="assets/js/blog.js"></script>
+  </body>
 </html>
