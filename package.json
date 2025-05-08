@@ -1,1 +1,1 @@
-{"name":"portfolio","private":true,"version":"0.0.0","type":"module","scripts":{"dev":"vite","build":"vite build","preview":"vite preview"},"devDependencies":{"vite":"^6.0.11"}}
+{"name":"portfolio","private":true,"version":"0.0.0","type":"module","scripts":{"dev":"vite","build":"vite build","preview":"vite preview"},"devDependencies":{"vite":"^6.0.11"},"dependencies":{"markdown-it":"^14.1.0","markdown-it-checkbox":"^1.1.0"}}
