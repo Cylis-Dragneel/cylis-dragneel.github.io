@@ -1,5 +1,8 @@
+// src/assets/js/blog-post.js
 import MarkdownIt from "markdown-it";
 import markdownItCheckbox from "markdown-it-checkbox";
+import markdownItAnchor from "markdown-it-anchor";
+import { slugify } from "./utils.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   // Theme Toggle
@@ -94,15 +97,24 @@ document.addEventListener("DOMContentLoaded", async () => {
           },
           breaks: true,
           html: true, // Enable HTML tags in source
-        }).use(markdownItCheckbox); // Register the checkbox plugin
+        })
+          .use(markdownItCheckbox) // Register the checkbox plugin
+          .use(markdownItAnchor, {
+            slugify: slugify,
+            permalink: markdownItAnchor.permalink.headerLink(),
+          });
 
         // Adjust image path
         md.renderer.rules.image = (tokens, idx, options, env, self) => {
           const token = tokens[idx];
           const src = token.attrGet("src");
           const alt = token.content;
-          const imagePath = `blog/${src}`;
-          return `<img src="${imagePath}" alt="${alt}" />`;
+          if (src.startsWith("https")) {
+            return `<img src="${src}" alt="${alt}" />`;
+          } else {
+            const imagePath = `blog/${src}`;
+            return `<img src="${imagePath}" alt="${alt}" />`;
+          }
         };
 
         // Render the content
