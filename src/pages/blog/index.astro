@@ -1,0 +1,68 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+function formatDate(date: Date): string {
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+---
+
+<MainLayout title="Blog | Cylis" currentPage="Blog">
+  <section class="blog-list py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-bold text-base-50 mb-2">Blog</h1>
+      <div class="w-20 h-1 bg-accent-500 mb-6"></div>
+      <p class="text-base-400 text-lg mb-12">
+        Thoughts on tech, reviews, and whatever else I find interesting.
+      </p>
+
+      {
+        posts.length === 0 ? (
+          <div class="text-center py-12">
+            <p class="text-base-400">No posts yet. Check back soon!</p>
+          </div>
+        ) : (
+          <div class="space-y-8">
+            {posts.map((post) => (
+              <article class="group">
+                <a
+                  href={`/blog/${post.slug}`}
+                  class="blog-card block p-6 bg-base-900/50 rounded-xl border border-base-800 hover:border-accent-500/50 transition-all hover:-translate-y-1"
+                >
+                  <div class="flex flex-wrap gap-2 mb-3">
+                    {post.data.tags.map((tag) => (
+                      <span class="px-2 py-1 text-xs font-mono text-accent-400 bg-accent-500/10 rounded">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  <h2 class="text-xl font-semibold text-base-100 group-hover:text-accent-400 transition-colors mb-2">
+                    {post.data.title}
+                  </h2>
+
+                  <p class="text-base-400 text-sm mb-4 line-clamp-2">
+                    {post.data.summary}
+                  </p>
+
+                  <div class="flex items-center gap-4 text-sm text-base-500">
+                    <span>{formatDate(post.data.date)}</span>
+                    <span>·</span>
+                    <span>by {post.data.author}</span>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </section>
+</MainLayout>

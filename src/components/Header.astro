@@ -1,0 +1,179 @@
+---
+interface Props {
+  currentPage?: string;
+}
+
+const { currentPage = "" } = Astro.props;
+
+const navLinks = [
+  { href: "/#about", label: "About" },
+  { href: "/#skills", label: "Skills" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
+];
+---
+
+<header
+  class="fixed top-0 left-0 right-0 z-50 bg-base-950/80 backdrop-blur-md border-b border-base-800 transition-colors"
+  data-header
+>
+  <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a
+        href="/"
+        class="text-xl font-bold text-accent-400 hover:text-accent-300 transition-colors"
+      >
+        Cylis
+      </a>
+
+      <div class="hidden md:flex items-center gap-8">
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class:list={[
+                "text-sm font-medium transition-colors hover:text-accent-400",
+                currentPage === link.label
+                  ? "text-accent-400"
+                  : "text-base-300",
+              ]}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+        <button
+          id="theme-toggle"
+          class="p-2 rounded-lg text-base-400 hover:text-accent-400 hover:bg-base-800 transition-colors"
+          aria-label="Toggle theme"
+        >
+          <svg
+            class="w-5 h-5 sun-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            ></path>
+          </svg>
+          <svg
+            class="w-5 h-5 moon-icon hidden"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu button -->
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden p-2 rounded-lg text-base-400 hover:text-accent-400 hover:bg-base-800 transition-colors"
+        aria-label="Toggle menu"
+      >
+        <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden pb-4">
+      <div class="flex flex-col gap-2">
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class:list={[
+                "px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-base-800",
+                currentPage === link.label
+                  ? "text-accent-400"
+                  : "text-base-300",
+              ]}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+        <button
+          id="theme-toggle-mobile"
+          class="px-3 py-2 rounded-lg text-sm font-medium text-base-300 hover:bg-base-800 transition-colors text-left"
+        >
+          Toggle theme
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  function initHeader() {
+    const themeToggle = document.getElementById("theme-toggle");
+    const themeToggleMobile = document.getElementById("theme-toggle-mobile");
+    const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const header = document.querySelector("[data-header]");
+
+    function updateIcons() {
+      const isDark = document.documentElement.getAttribute("data-theme") !== "light";
+      document.querySelectorAll(".sun-icon").forEach(el => {
+        (el as HTMLElement).style.display = isDark ? "block" : "none";
+      });
+      document.querySelectorAll(".moon-icon").forEach(el => {
+        (el as HTMLElement).style.display = isDark ? "none" : "block";
+      });
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute("data-theme");
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      updateIcons();
+    }
+
+    themeToggle?.addEventListener("click", toggleTheme);
+    themeToggleMobile?.addEventListener("click", toggleTheme);
+
+    mobileMenuBtn?.addEventListener("click", () => {
+      mobileMenu?.classList.toggle("hidden");
+    });
+
+    // Update header background on scroll
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.scrollY;
+      if (header) {
+        if (currentScroll > 50) {
+          header.classList.add("bg-base-950/95");
+        } else {
+          header.classList.remove("bg-base-950/95");
+        }
+      }
+    });
+
+    // Initial icon state
+    updateIcons();
+  }
+
+  // Run on initial load
+  initHeader();
+
+  // Re-run on Astro page transitions
+  document.addEventListener("astro:after-swap", initHeader);
+</script>

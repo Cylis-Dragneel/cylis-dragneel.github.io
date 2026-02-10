@@ -1,5 +1,5 @@
 {
-  description = "A Nix-flake-based Node.js development environment";
+  description = "Portfolio website development environment";
 
   inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";
 
@@ -19,26 +19,18 @@
           f {
             pkgs = import nixpkgs {
               inherit system;
-              overlays = [ self.overlays.default ];
             };
           }
         );
     in
     {
-      overlays.default = final: prev: rec {
-        nodejs = prev.nodejs;
-        yarn = (prev.yarn.override { inherit nodejs; });
-      };
-
       devShells = forEachSupportedSystem (
         { pkgs }:
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
-              node2nix
-              nodejs
-              nodePackages.pnpm
-              yarn
+              bun
+              git-lfs
             ];
           };
         }

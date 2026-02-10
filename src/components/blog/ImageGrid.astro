@@ -1,0 +1,43 @@
+---
+interface Props {
+  images: Array<{
+    src: string;
+    alt: string;
+    caption?: string;
+  }>;
+  columns?: 2 | 3 | 4;
+}
+
+const { images, columns = 2 } = Astro.props;
+
+const gridClasses = {
+  2: "grid-cols-1 sm:grid-cols-2",
+  3: "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+  4: "grid-cols-2 lg:grid-cols-4",
+};
+---
+
+<div class:list={["grid gap-4 my-8", gridClasses[columns]]}>
+  {
+    images.map((image) => {
+      const imageSrc = image.src.startsWith("http")
+        ? image.src
+        : `/blog/img/${image.src}`;
+      return (
+        <figure class="group">
+          <img
+            src={imageSrc}
+            alt={image.alt}
+            class="rounded-lg shadow-md w-full aspect-video object-cover group-hover:shadow-lg transition-shadow"
+            loading="lazy"
+          />
+          {image.caption && (
+            <figcaption class="mt-2 text-center text-xs text-base-400">
+              {image.caption}
+            </figcaption>
+          )}
+        </figure>
+      );
+    })
+  }
+</div>

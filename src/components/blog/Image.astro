@@ -1,0 +1,49 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  caption?: string;
+  size?: "small" | "medium" | "large" | "full";
+  position?: "left" | "center" | "right";
+}
+
+const { src, alt, caption, size = "large", position = "center" } = Astro.props;
+
+const sizeClasses = {
+  small: "max-w-sm",
+  medium: "max-w-lg",
+  large: "max-w-2xl",
+  full: "max-w-full",
+};
+
+const positionClasses = {
+  left: "mr-auto",
+  center: "mx-auto",
+  right: "ml-auto",
+};
+
+// Handle relative paths for blog images
+const imageSrc = src.startsWith("http") ? src : `/blog/img/${src}`;
+---
+
+<figure class:list={["my-8", sizeClasses[size], positionClasses[position]]}>
+  <img
+    src={imageSrc}
+    alt={alt}
+    class="rounded-lg shadow-lg w-full"
+    loading="lazy"
+  />
+  {
+    caption && (
+      <figcaption class="mt-3 text-center text-sm text-base-400 italic img-caption">
+        {caption}
+      </figcaption>
+    )
+  }
+</figure>
+
+<style>
+  [data-theme="light"] .img-caption {
+    color: var(--color-base-500);
+  }
+</style>

@@ -1,0 +1,111 @@
+---
+interface Skill {
+  name: string;
+  level: number;
+  color: string;
+}
+
+interface SkillCategory {
+  title: string;
+  skills: Skill[];
+}
+
+const skillCategories: SkillCategory[] = [
+  {
+    title: "Languages",
+    skills: [
+      { name: "Go", level: 85, color: "bg-cyan-500" },
+      { name: "Python", level: 80, color: "bg-yellow-500" },
+      { name: "C", level: 60, color: "bg-blue-500" },
+    ],
+  },
+  {
+    title: "Technical",
+    skills: [
+      { name: "Unix/Linux", level: 95, color: "bg-orange-500" },
+      { name: "DevOps Tools", level: 80, color: "bg-purple-500" },
+      { name: "Web Development", level: 75, color: "bg-pink-500" },
+    ],
+  },
+  {
+    title: "Other",
+    skills: [
+      { name: "Technical Writing", level: 85, color: "bg-emerald-500" },
+      { name: "Prompt Engineering", level: 70, color: "bg-indigo-500" },
+    ],
+  },
+];
+---
+
+<section id="skills" class="py-24 transition-colors">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-base-50 mb-2">Skills</h2>
+    <div class="w-20 h-1 bg-accent-500 mb-12"></div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      {
+        skillCategories.map((category) => (
+          <div class="skill-card bg-base-900/50 rounded-xl p-6 border border-base-800">
+            <h3 class="text-lg font-semibold text-base-100 mb-6">
+              {category.title}
+            </h3>
+            <div class="space-y-5">
+              {category.skills.map((skill) => (
+                <div>
+                  <div class="flex justify-between mb-2">
+                    <span class="text-base-300 text-sm font-medium">
+                      {skill.name}
+                    </span>
+                    <span class="text-base-500 text-sm">{skill.level}%</span>
+                  </div>
+                  <div class="skill-bar-bg h-2 bg-base-800 rounded-full overflow-hidden">
+                    <div
+                      class:list={["h-full rounded-full skill-bar", skill.color]}
+                      style={`--skill-level: ${skill.level}%`}
+                      data-level={skill.level}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  function animateSkillBars() {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const bars = entry.target.querySelectorAll(".skill-bar");
+            bars.forEach((bar) => {
+              const element = bar as HTMLElement;
+              const level = element.dataset.level;
+              element.style.width = `${level}%`;
+            });
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const section = document.getElementById("skills");
+    if (section) {
+      observer.observe(section);
+    }
+  }
+
+  animateSkillBars();
+  document.addEventListener("astro:after-swap", animateSkillBars);
+</script>
+
+<style>
+  .skill-bar {
+    width: 0;
+    transition: width 1s ease-out;
+  }
+</style>
