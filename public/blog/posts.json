@@ -7,7 +7,16 @@
       "author": "Cylis",
       "summary": "Review of Dororo- My Challenge contract for the Anicord Winter 2025 season.",
       "tags": ["Anime", "Review"],
-      "available": false
+      "available": true
+    },
+    {
+      "id": "angel-beats-review-anicord-winter-2025",
+      "title": "Angel Beats Review - Anicord Winter 2025 Base Contract",
+      "date": "2025-05-07",
+      "author": "Cylis",
+      "summary": "Review of Angel Beats - My Base contract for the Anicord Winter 2025 season.",
+      "tags": ["Anime", "Review"],
+      "available": true
     },
     {
       "id": "katanagatari-review-anicord-winter-2025",
@@ -19,12 +28,30 @@
       "available": true
     },
     {
+      "id": "perfect-blue-review-anicord-winter-2025",
+      "title": "Perfect Blue Review - Anicord Winter 2025 Movie Special",
+      "date": "2025-05-07",
+      "author": "Cylis",
+      "summary": "Review of Perfect Blue - My Movie Special contract for the Anicord Winter 2025 season.",
+      "tags": ["Anime", "Review"],
+      "available": true
+    },
+    {
       "id": "music-contracts-2025-review",
       "title": "Music Contracts 2025 Review",
       "date": "2025-04-14",
       "author": "Cylis",
       "summary": "Review of the Music Contracts for the 2025 season.",
       "tags": ["Music", "Review"],
+      "available": true
+    },
+    {
+      "id": "bakemonogatari-review-anicord-winter-2025",
+      "title": "Bakemonogatari Review - Anicord Winter 2025 Aid Contract",
+      "date": 2025-06-11,
+      "author": "Cylis",
+      "summary": "Review of Bakemonogatari - My Aid Contract for Anicord Winter 2025 season.",
+      "tags": ["Anime", "Review"],
       "available": true
     }
   ]

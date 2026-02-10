@@ -1,27 +1,96 @@
 ## Dororo
 
-Discord msg: \***\*Dororo (Anime)\*\***
-**Season:** _Winter 2025_
-**Type:** _Challenge Contract_
-**Progress:** _24/24 Episodes_
+### Discord msg:
+**__Dororo (Anime)__**
+**Season:** *Winter 2025*
+**Type:** *Challenge Contract*
+**Progress:** *24/24 Episodes*
 **Contractor: @bendb**
 
-**Review - (Insert Review or Google Docs/relevant links here) **
+**Review - https://cylis.is-a.dev/blog-post.html?id=dororo-review-anicord-winter-2025**
 
 **Score: 8/10**
 
-I have had this anime for well a few years at least now. What originally introduced me to this anime all that time ago was [this](https://youtu.be/FgQR2O8PGf4?si=BNVH0fvKHDQX1ftq) fire (pun intended) opening.
-To be honest, I was expecting just an action shounen style anime. But what I instead got was so much more.
+### Review
+I have had this anime in my plan to watch for atleast a few years now. What originally introduced me to this anime all that time ago was [this](<https://youtu.be/FgQR2O8PGf4?si=BNVH0fvKHDQX1ftq>) fire (pun intended) opening. To be honest, I was expecting just a battle shounen anime. But what I instead got was so much more.
+To start, my favorite characters were: Hyakkimaru, the doctor, and wandering monk. And my least favorite characters were: basically everyone else, I either hated the rest, found them annoying or just neutral about them. Let me get this out of the way too, I didn't like Dororo (the character not the anime) mainly because she has a high-pitched voice that gives me a headache. I just can't bear listening to certain high-pitched voices.
+Onwards to music, other than the first OP (that I already mentioned) and the 2nd ED (love Eve, I wasn't expecting an Eve track) I really didn't find any of the OST memorable. The first ED and the second ED were... ok, I didn't hate them but I didn't like them. Just not my vibe tbh
+I loved the story, Hyakkimaru's journey to regain his senses, and all of the challenges that came with it. To name a few Episodes that I particularly enjoyed were `Episode 6 & 7` the potrayal of what happens to Hyakkimaru when he regains key senses like hearing, scent, emotions, pain was just really interesting to watch. The fact he actually got weaker with the addition of those senses, and how he later ||uses his new found sense of hearing to find and defeat that snake/dragon by hitting arrows against it's body as his soul seeing eyes were useless in that smoke||. And in `Episode 7` ||when confronted with the spider demon who had fallen in love with a human and chosen to give up killing humans (except those who targeted her), seeing her soul's color transition from red to white was just peak||.
+Ending and moral dilemma spoilers ig: ||Episode 11 onwards the real moral dilemma presented. "Is it right to sacrifice one for the greater good?" Now, there really isn't a right answer to this dilemma, however, there is an answer that I lean more towards. "It is never right to sacrifice either the majority for the minority or vice versa". Peace and prosperity built upon the sacrifice of a single person is very fragile, if your entire region's peace is built on the sacrifice of one man... maybe that peace doesn't deserve to exist at all. This was mentioned by the mother, in Episode 23, but she did end up realizing it which I am proud of. Dad on the other hand? nah fuck him, oh he had 1 last moment of regret and realization. I don't care fuck him. Tahomaru? Now I actually liked him in the beginning, he brought up that what was being done was wrong but when the full circumstances were presented infront of him he just chose one of the sides. And I didn't hate him for that, I completely understood his perspective. What started tilting me to the other side for his character was when he started just calling Hyakkimaru a demon and even said "They were never yours" when confronted by Hyakkimaru for the eyes he got from the demon. Near the end he too started to think the other way, which for him seemed abrupt? I don't know he was all demon this demon that and then "Sorry, have your eyes back", felt out of character.||
+Overall, I did like the anime a lot there were a few things here and there that were annoying and some moments just felt very slow. In the end though, this was a solid watch and I am glad I watched it.
 
 ## The Negatives
 
 Let's just get this out of the way first, the things I didn't like:
 
-1. Dororo's voice. I have an annoyance with certain high-pitched voices, I can't tolerate them and that leads to a headache. And unfortunately Dororo's voice falls in that character so I am not ashamed to say it that I watched this anime on a lower than normal volume to make it bearable.
-2. It might be because I watched it on a lower volume (most likely the cause) but the OST other than the OP didn't really stand out to me.
+- Dororo's voice. I have an annoyance with certain high-pitched voices, I can't tolerate them and that leads to a headache. And unfortunately Dororo's voice falls in that character so I am not ashamed to say it that I watched this anime on a lower than normal volume to make it bearable.
+- It might be because I watched it on a lower volume (most likely the cause) but the OST other than the OP didn't really stand out to me.
 
 ## Positives
 
-I love the entire idea, of how we follow Hyakkimaru's journey to regain his senses and limbs. He starts regaining what once originally belonged to him, but he lost due to the greed of his father, in an RPG-like fashion where the more he kills he levels up you could say.
-It's really fun and an interesting perspective of how he deals with suddenly regaining the sense of touch, hearing, and scent. The feelings of pain and rage. Particularly Episode 6 really highlights this.
-For me, my favorite episode was Episode 7, where the spider demon falls in love with a human. And you can see through Hyakkimaru's perspective that the color of her soul changes from red to white, signifying her humanization.
+- I love the entire idea, of how we follow Hyakkimaru's journey to regain his senses and limbs. He starts regaining what once originally belonged to him, but he lost due to the greed of his father, in an RPG-like fashion where the more monsters kills he levels up you could say.
+- It's really fun and an interesting perspective of how he deals with suddenly regaining the sense of touch, hearing, and scent. The feelings of pain and rage. Particularly Episode 6 really highlights this.
+- For me, my favorite episode was Episode 7, where the spider demon falls in love with a human. And you can see through Hyakkimaru's perspective that the color of her soul changes from red to white, signifying her humanization leading to Hyakkimaru sparing her. I just loved that entire sequence of events
+- I'll mention it again, the opening. It was what originally drew me to this anime and led me to adding it to my planning list and it does not disappoint even after all this time.
+
+### Notes
+I started writing these from Episode 10 onwards so yea apologies (I wrote some of this review at like the start of the season and then got busy), I will give a quick impression of things from Episode 1-10 (at least things I remember meaning they had some impact)
+- I love this entire journey of regaining Hyakkimaru's limbs and senses. Him slowly regaining things that he was supposed to have, particularly the ones that hit hard were when he regained his hearing and voice. That entire episode was just great
+- I liked how he drastically got nerfed when he gained his hearing, as someone who had never heard anything suddenly being able to hear everything threw him for a loop. Really made me realize how many noises around us we have just grown to ignore as white noise, yet that white noise was agonizing to him.
+- Same with the episode with the uhh dragon monster? the clouds... Since he relies on seeing the true soul and malice to fight he was completely lost when everything around him seemed like an enemy. Using the arrows bouncing off to locate the monster only a while after getting his hearing back was peak
+- Uhh other than that I like that wandering monk... and yea that's it
+
+#### Episode 11
+- This kid's mom ain't alive, no way
+- Nah monk why are you at the Hall of hell, you are literally one of 3 characters I like that are still alive
+- Time for the fated confrontation between sacrificed son and shitty father
+- Uh oh.. the statue got a crack... that can't be good
+
+#### Episode 12
+- I am glad Tahomaru is confronting his mother about it, and I have started to like Tahomaru as a character
+- Well, Sukeroku won't be alive by the time Dororo comes back
+- Yea, I definitely like Tahomaru now. It is a difficult dilemma to answer though, what I can say is to sacrifice one for the greater populace is bad but so is the reverse. However, in this case, though the greater populace will be harmed if Hyakkimaru succeeds, Hyakkimaru was originally just sacrificed to fulfill the greedy ambitions of his father. It just so happened that prosperity of his land was a means to that goal. And one more thing I want to say is, If the prosperity of a land can be shattered by the success (him defeating all the demons) or kept by the failure (him dying) then is that peace and prosperity even worth anything?
+- Oh it's that piece of shit
+- LMAO bro wet himself![](img/2025-05-10-15-22-35.png)
+- So that is what Tahomaru chose in the end. I can't blame him for that
+- I feel like dying to atone for your sin, yet not righting the wrong that you have done is one of the most cowardly things to do so I can't really support the mother's perspective on this but I kind of see where she is coming from
+- Also the statue is interesting, why is it's "soul" green. What does that mean?
+- Damn Sukeroku's mother is alive, honestly surprising
+
+#### Episode 13
+- I still don't really know why the show is called "Dororo", he doesn't feel like a main character. It is kind of weird to me that the anime chose him to be the focus, maybe this will make sense by the end (who knows maybe Hyakkimaru ends up dying)
+- Ooh new OP time... tldr I liked the previous one 100% more
+- We got more demon worshippers, let's go
+- Wait is that fucking Eve on the ED?!?! Fire
+
+#### Episode 14
+- Treasure map on the back is a vibe
+- Another monster lover, this time he evil
+- One creepy ahh village imo
+
+#### Episode 15
+- My face during this episode
+![](img/2025-05-10-17-59-52.png)
+#### Episode 17
+- I like how Hyogo just carries a metal rod, there must be a name for the weapon but it's a metal rod
+- Nah Hyakkimaru calling the doctor "Mama", peak. I teared up
+
+#### Episode 18
+- Fuck you itachi
+- Land shark... white shark wasn't enough, but also 
+
+#### Episode 19
+- So we are in Opposite day the village
+
+#### Episode 20
+- Now a manticore
+
+#### Episode 21
+- Ah yes his body is but a mere toy, hmm indeed![](img/2025-05-11-01-43-49.png)
+- Fucking rapidash?
+
+#### Episode 22
+- These people really have gotten more absurd over time, at first I understood them. Though I didn't support them I understood their perspectives but now. "They were never yours". Wow
+
+#### Episode 23
+- Totally haven't said that one before![](img/2025-05-11-02-24-57.png)

@@ -20,6 +20,22 @@ This anime was truly a roller coaster of emotions, from wholesome moments betwee
 I don't have any other words to describe what I watched, at first I thought I'd have plenty to talk about in this Summary review that I am writing at the end of the show but I can't do Katanagatari justice like that. I advise just reading through my babbling down below if you have watched the show and watching the show yourself if you haven't
 One last thing though, this show will have lasting effects on me. "Cheerio" will now forever be words of encouragement from now on.
 
+### Discord Message
+**__Katanagatari (Anime)__**
+**Season:** *Winter 2025*
+**Type:** *Veteran Special*
+**Progress:** *12/12 Episodes*
+**Contractor: @Arzola**
+**Special Mentions: @cycryllic.9785**
+
+**Review:**
+Note: This is a summary of my thoughts and spoiler free except for the spoiler tags, for my full thoughts and experience read my notes here: https://cylis.is-a.dev/blog-post.html?id=katanagatari-review-anicord-winter-2025
+I have to start by saying I really love this show, truly. I didn't go in expecting anyhting, in fact I had heard nothing about Katanagatari before. But I did have it in my Plan to watch, mostly because I think I was in a phase where after watching Bakemonogatari I just added everything with `gatari` into my ptw. Dumb ik.
+Anyways, as much as I did love this show there was really only 1 problem with it, which was Episode 4 ||and how Sabi Hakuhei got done dirty, the man was hyped since Episode 1 but then he just gets off-screened|| which was really disappointing and honestly I was debating holding off on the 10/10 because of it, however, Katanagatari ended up meeting my personal criteria for a 10 which is to make me cry. Which is seriously hard to do, the only anime that have ever achieved that are `One Piece`, `Haikyu` (Probably surprising to most), `Kaguya`, `Hunter x Hunter` and `Assassination Classroom`
+This anime was truly a roller coaster of emotions, from wholesome moments between Shichika and Togame, to ||the atrocity in Episode 11||. You can read my notes as I was going through the last 2 episodes and if you couldn't tell, I was basically losing it.. There were times when I didn't even want to stop to take a screenshot and talk about something and just wanted to let it play but then I knew I wouldn't be able to give my exact feelings at the time if I left it for any later.
+I don't have any other words to describe what I watched, at first I thought I'd have plenty to talk about in this Summary review that I am writing at the end of the show but I can't do Katanagatari justice like that. I advise just reading through my babbling down below if you have watched the show and watching the show yourself if you haven't
+One last thing though, this show will have lasting effects on me. "Cheerio" will now forever be words of encouragement from now on.
+
 **Score: 10/10**
 
 ### Babbling

@@ -1,0 +1,32 @@
+## Perfect Blue
+
+### Discord Message
+**__Perfect Blue__**
+**Season:** *Winter 2025*
+**Type:** *Movie Special*
+**Progress:** *1/1*
+**Contractor: @Frazzle**
+
+**Review:**
+Ok, so I still don't really know what I watched. I didn't go into it expecting anything really, I just know this movie is praised a bit. After watching it, I can say it's an experience.
+Now, would I like to go through this experience ever again? No, probably not. That doesn't mean that I hate it or anything, but it was disturbing. Some parts of the movie were just hard to sit through.
+And at the end of the movie, I am still in confusion I don't know what's real and what isn't. The drama section really fucked me, I had to pause multiple times just to wrap my head around things. I legit had to sit there for 2 hours after the movie was done to digest what I had even seen, so I think I understand everything now but the last time I was this confused was when I accidentally started watching Made in Abyss from Season 2 instead of Season 1 :kekw:
+Again as I have mentioned before, it wasn't the most enjoyable watch. I do like mystery and psychological thriller, in fact they are my favorite genres, but the dark side of Idol culture and the acting industry was definitely not on my list.
+A few positives that I do want to mention are: Firstly, loved the OST. It just really pieced the eerie and creepy nature of everything together. Second, the art style was just amazing also really focused on the creepy nature of the movie and it did well in portraying the facial expressions (If you can't tell I am really bad with words, but I am trying lol)
+As for characters... I was not expecting Rumi to... end up like that. Also that stalker really went on a rampage, most sane idol fan frfr.
+
+Objectively? I'd say this movie is a solid 8, it really portrayed the premise well. Personally? Don't really have much interest in the topic and I had to take quite a lot of breaks to finish it, if it weren't for the breaks I would have probably dropped it around the time Mima gets more lines in the drama for the first time (iykyk). So yea, a 6 is the highest I can give as I did like aspects of it and it's execution, just didn't enjoy the premise
+So, would I recommend others to watch this? No, unless I really know them well enough to know they might enjoy this or find something of value from this movie.
+
+**Score: 6/10**
+
+Optional: (Insert Contract related Non spoiler Image/GIF)
+
+### Review
+- Starting off pretty creepy, and then there is the mystery of the "stalker" and I love myself some mystery.
+- *Sigh*, I get what kind of movie this is. This was honestly, hard to sit through.
+- The OST really just pieces everything together, the eerie and creepy vibes. Everything goes hand in hand with each other.
+- I won't deny that every minute my mind was going "WTF". I was so lost throughout the entire shit
+- Holy shit, the voice of the stalker caught me off-guard :kekw: it was so different compared to my expectations? imagination?
+- I honestly can't tell what's real and what isn't in this movie.
+- It's certainly... an experience, would I ever want to experience it again? No

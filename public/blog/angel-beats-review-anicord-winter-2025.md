@@ -1,0 +1,31 @@
+## Angel Beats
+
+### Discord Message
+**__Angel Beats (Anime)__**
+**Season:** *Winter 2025*
+**Type:** *Base Contract*
+**Progress:** *13/13 Episodes*
+**Contractor: @bendb**
+
+**Review:**
+To start off I had already heard the opening beforehand so no surprise there and in the beginning I didn't really find the opening or ending special but over time I really started enjoying both. Before going into this anime I had heard things like "It is one of the most depressing shows", "This show will break you emotionally" etc. Now, the show did have it's moments but it was by no means a show that could break me emotionally not even remotely close to it.
+For being called a "depressing" show, it had a lot of light-hearted moments and jokes, in fact too many jokes for my liking. This was my main gripe with it, there were just too many gag characters I couldn't care about more and most of the characters except a handful were just empty shells. A lot of the times these jokes were also in just bad places that ruined moments for me personally, for example ||Yui kicking Hinata so he can't catch the ball and disappear, though the reason she did that was purely self serving, the entire episode was leading up to this moment and even I was starting to get teary eyed but it was all ruined imo. Now, am I glad Hinata didn't disappear and ended up liking him as a character more? Yes, do I still think Yui kicking him at that moment can be ignored? No.||
+Also let me get this out of the way too, the characters I hated were Takeyama (just straight up annoying) and Yui (annoying and I get a headache from high-pitched voices so this was a given). Meanwhile, characters I enjoyed were Iwasawa, Kanade, Otonashi, Hinata, Yuri and yea that's it any other character was just meh (Can't believe T.K doesn't know English).
+At the start the anime was a miss for me, other than Iwasawa's episode nothing else really stood out to me. However, the anime really picked up especially around Episode 8 and onwards. This was the moment I really started enjoying myself and saw why people like it.
+Kanade best girl, no doubt. I particularly teared up at Episode 9,12 and 13. Didn't cry, it is hard for things to achieve that though many anime have done that. Also, Episode 10 spoiler: ||Will say, even though I disliked her a lot her story had a very nice conclusion and I was satisfied. Did that make me like her? No. Was I happy when she disappeared? Yes.||
+Overall, I really liked the ending. It was a nice "happy" conclusion to everything. Though I am still a bit confused about what happened in Episode 12, do I care much about it? Not really, no.
+
+Tldr: As much as I didn't enjoy the show a lot as a whole, it had it's fair share of good and bad moments. However, I still do recommend people watch it, it's just 13 eps and it is an experience alright
+
+I am open to more in-depth questions about my opinions, just ping me. The show is still fresh in my mind (I just finished it 5 mins ago, and I was taking notes for the review as I watched whenever I had something I wanted to say)
+
+**Score: 7/10**
+
+Optional: (Insert Contract related Non spoiler Image/GIF)
+
+### Review
+- Wow, ok didn't expect the twist at the ending of Episode 8. Holy, and yea they are really making me feel bad for Kanade
+- Episode 9 was epic, my favorite episode so far. I actually teared up.
+- Episode 10, as much as I dislike Yui (mainly for her high pitched voice that gives me a headache) her story and conclusion was very wholesome. But I can't say I wasn't happy when she eventualy disappeared
+- Episode 12, another very nice episode. Though it did leave me very confused
+- Ending, ok yea the anime was good. I definitely went through my ups and downs with the show. It definitely had it's moment that I really didn't like paired with characters that had no real depth. But it also had some really good moments as well.
