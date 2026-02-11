@@ -34,9 +34,9 @@ const projects: Project[] = [
 ];
 ---
 
-<section id="projects" class="py-24 bg-base-900/50 transition-colors">
+<section id="projects" class="py-24 projects-section transition-colors">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-base-50 mb-2">Projects</h2>
+    <h2 class="text-3xl font-bold projects-heading mb-2">Projects</h2>
     <div class="w-20 h-1 bg-accent-500 mb-12"></div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -46,11 +46,11 @@ const projects: Project[] = [
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
-            class="project-card group block bg-base-800/50 rounded-xl p-6 border border-base-700 hover:border-accent-500/50 transition-all hover:-translate-y-1"
+            class="project-card group block rounded-xl p-6 border transition-all hover:-translate-y-1"
           >
             <div class="flex items-start justify-between mb-4">
               <svg
-                class="w-10 h-10 text-accent-500"
+                class="w-10 h-10 project-icon"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -63,7 +63,7 @@ const projects: Project[] = [
                 />
               </svg>
               <svg
-                class="w-5 h-5 text-base-500 group-hover:text-accent-400 transition-colors"
+                class="w-5 h-5 project-link-icon group-hover:text-accent-400 transition-colors"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -77,17 +77,17 @@ const projects: Project[] = [
               </svg>
             </div>
 
-            <h3 class="text-lg font-semibold text-base-100 mb-2 group-hover:text-accent-400 transition-colors">
+            <h3 class="text-lg font-semibold project-title mb-2 group-hover:text-accent-400 transition-colors">
               {project.title}
             </h3>
 
-            <p class="text-base-400 text-sm mb-4 line-clamp-3">
+            <p class="project-description text-sm mb-4 line-clamp-3">
               {project.description}
             </p>
 
             <div class="flex flex-wrap gap-2 mt-auto">
               {project.tags.map((tag) => (
-                <span class="px-2 py-1 text-xs font-mono text-accent-400 bg-accent-500/10 rounded">
+                <span class="project-tag px-2 py-1 text-xs font-mono rounded">
                   {tag}
                 </span>
               ))}
@@ -101,10 +101,10 @@ const projects: Project[] = [
         href="https://github.com/Cylis-Dragneel"
         target="_blank"
         rel="noopener noreferrer"
-        class="group flex flex-col items-center justify-center bg-base-800/30 rounded-xl p-6 border border-dashed border-base-700 hover:border-accent-500/50 transition-all hover:-translate-y-1"
+        class="github-cta group flex flex-col items-center justify-center rounded-xl p-6 border border-dashed transition-all hover:-translate-y-1"
       >
         <svg
-          class="w-12 h-12 text-base-500 group-hover:text-accent-400 mb-4 transition-colors"
+          class="w-12 h-12 github-icon group-hover:text-accent-400 mb-4 transition-colors"
           fill="currentColor"
           viewBox="0 0 24 24"
         >
@@ -112,10 +112,67 @@ const projects: Project[] = [
             d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
           ></path>
         </svg>
-        <p class="text-base-400 group-hover:text-base-300 text-center transition-colors">
+        <p class="github-text group-hover:text-base-300 text-center transition-colors">
           View more on GitHub
         </p>
       </a>
     </div>
   </div>
 </section>
+
+<style>
+  .projects-section {
+    background-color: color-mix(in srgb, var(--color-base-900) 50%, transparent);
+  }
+
+  .projects-heading {
+    color: var(--color-base-50);
+  }
+
+  .project-card {
+    background-color: color-mix(in srgb, var(--color-base-800) 50%, transparent);
+    border-color: var(--color-base-700);
+  }
+
+  .project-card:hover {
+    border-color: color-mix(in srgb, var(--color-accent-500) 50%, transparent);
+  }
+
+  .project-icon {
+    color: var(--color-accent-500);
+  }
+
+  .project-link-icon {
+    color: var(--color-base-500);
+  }
+
+  .project-title {
+    color: var(--color-base-100);
+  }
+
+  .project-description {
+    color: var(--color-base-400);
+  }
+
+  .project-tag {
+    color: var(--color-accent-400);
+    background-color: color-mix(in srgb, var(--color-accent-500) 10%, transparent);
+  }
+
+  .github-cta {
+    background-color: color-mix(in srgb, var(--color-base-800) 30%, transparent);
+    border-color: var(--color-base-700);
+  }
+
+  .github-cta:hover {
+    border-color: color-mix(in srgb, var(--color-accent-500) 50%, transparent);
+  }
+
+  .github-icon {
+    color: var(--color-base-500);
+  }
+
+  .github-text {
+    color: var(--color-base-400);
+  }
+</style>

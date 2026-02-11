@@ -9,42 +9,39 @@ const { type = "info", title } = Astro.props;
 const styles = {
   info: {
     border: "border-accent-500",
-    bg: "bg-accent-500/10",
-    icon: "text-accent-400",
+    icon: "callout-icon-info",
     iconPath:
       "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   warning: {
     border: "border-yellow-500",
-    bg: "bg-yellow-500/10",
-    icon: "text-yellow-400",
+    icon: "callout-icon-warning",
     iconPath:
       "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z",
   },
   error: {
     border: "border-red-500",
-    bg: "bg-red-500/10",
-    icon: "text-red-400",
+    icon: "callout-icon-error",
     iconPath:
       "M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z",
   },
   tip: {
     border: "border-green-500",
-    bg: "bg-green-500/10",
-    icon: "text-green-400",
+    icon: "callout-icon-tip",
     iconPath:
       "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z",
   },
 };
 
 const style = styles[type];
+const bgClass = `callout-bg-${type}`;
 ---
 
 <div
   class:list={[
     "my-6 p-4 rounded-lg border-l-4",
     style.border,
-    style.bg,
+    bgClass,
   ]}
 >
   <div class="flex items-start gap-3">
@@ -61,8 +58,8 @@ const style = styles[type];
         d={style.iconPath}></path>
     </svg>
     <div class="flex-1">
-      {title && <p class="font-semibold text-base-100 mb-1 callout-title">{title}</p>}
-      <div class="text-base-300 text-sm callout-content">
+      {title && <p class="font-semibold mb-1 callout-title">{title}</p>}
+      <div class="text-sm callout-content">
         <slot />
       </div>
     </div>
@@ -70,11 +67,45 @@ const style = styles[type];
 </div>
 
 <style>
-  [data-theme="light"] .callout-title {
-    color: var(--color-base-800);
+  .callout-title {
+    color: var(--color-base-100);
   }
 
-  [data-theme="light"] .callout-content {
-    color: var(--color-base-600);
+  .callout-content {
+    color: var(--color-base-300);
+  }
+
+  /* Icon colors for dark mode */
+  .callout-icon-info {
+    color: var(--color-accent-400);
+  }
+
+  .callout-icon-warning {
+    color: #fbbf24;
+  }
+
+  .callout-icon-error {
+    color: #f87171;
+  }
+
+  .callout-icon-tip {
+    color: #4ade80;
+  }
+
+  /* Background colors */
+  .callout-bg-info {
+    background-color: color-mix(in srgb, var(--color-accent-500) 10%, transparent);
+  }
+
+  .callout-bg-warning {
+    background-color: color-mix(in srgb, #fbbf24 10%, transparent);
+  }
+
+  .callout-bg-error {
+    background-color: color-mix(in srgb, #ef4444 10%, transparent);
+  }
+
+  .callout-bg-tip {
+    background-color: color-mix(in srgb, #22c55e 10%, transparent);
   }
 </style>

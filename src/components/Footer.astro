@@ -25,11 +25,11 @@ const socialLinks = [
 ];
 ---
 
-<footer class="border-t border-base-800 bg-base-900/50 transition-colors">
+<footer class="site-footer border-t transition-colors">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <div class="flex flex-col md:flex-row justify-between items-center gap-6">
       <div class="text-center md:text-left">
-        <p class="text-base-400 text-sm">
+        <p class="footer-text text-sm">
           &copy; {currentYear} Cylis. Built with Astro & Tailwind.
         </p>
       </div>
@@ -41,7 +41,7 @@ const socialLinks = [
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              class="p-2 rounded-lg text-base-400 hover:text-accent-400 hover:bg-base-800 transition-colors"
+              class="footer-link p-2 rounded-lg transition-colors"
               aria-label={link.name}
             >
               <svg
@@ -57,3 +57,23 @@ const socialLinks = [
     </div>
   </div>
 </footer>
+
+<style>
+  .site-footer {
+    background-color: color-mix(in srgb, var(--color-base-900) 50%, transparent);
+    border-color: var(--color-base-800);
+  }
+
+  .footer-text {
+    color: var(--color-base-400);
+  }
+
+  .footer-link {
+    color: var(--color-base-400);
+  }
+
+  .footer-link:hover {
+    color: var(--color-accent-400);
+    background-color: var(--color-base-800);
+  }
+</style>

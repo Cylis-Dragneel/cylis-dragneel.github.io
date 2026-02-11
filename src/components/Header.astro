@@ -6,16 +6,23 @@ interface Props {
 const { currentPage = "" } = Astro.props;
 
 const navLinks = [
-  { href: "/#about", label: "About" },
-  { href: "/#skills", label: "Skills" },
-  { href: "/#projects", label: "Projects" },
+  { href: "/", label: "About", section: "about" },
+  { href: "/", label: "Skills", section: "skills" },
+  { href: "/", label: "Projects", section: "projects" },
   { href: "/blog", label: "Blog" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/", label: "Contact", section: "contact" },
 ];
+
+// For cross-page navigation, we need the hash in href
+// but on homepage we prevent default and scroll without hash
+const getHref = (link: typeof navLinks[number]) => {
+  if (link.section) return `/#${link.section}`;
+  return link.href;
+};
 ---
 
 <header
-  class="fixed top-0 left-0 right-0 z-50 bg-base-950/80 backdrop-blur-md border-b border-base-800 transition-colors"
+  class="fixed top-0 left-0 right-0 z-50 header-bg backdrop-blur-md border-b border-base-800 transition-colors"
   data-header
 >
   <nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +38,8 @@ const navLinks = [
         {
           navLinks.map((link) => (
             <a
-              href={link.href}
+              href={getHref(link)}
+              data-section={link.section}
               class:list={[
                 "text-sm font-medium transition-colors hover:text-accent-400",
                 currentPage === link.label
@@ -99,7 +107,8 @@ const navLinks = [
         {
           navLinks.map((link) => (
             <a
-              href={link.href}
+              href={getHref(link)}
+              data-section={link.section}
               class:list={[
                 "px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-base-800",
                 currentPage === link.label
@@ -113,7 +122,7 @@ const navLinks = [
         }
         <button
           id="theme-toggle-mobile"
-          class="px-3 py-2 rounded-lg text-sm font-medium text-base-300 hover:bg-base-800 transition-colors text-left"
+          class="px-3 py-2 rounded-lg text-sm font-medium nav-link hover:bg-base-800 transition-colors text-left"
         >
           Toggle theme
         </button>
@@ -155,14 +164,21 @@ const navLinks = [
       mobileMenu?.classList.toggle("hidden");
     });
 
+    // Close mobile menu when clicking section links
+    mobileMenu?.querySelectorAll("a[data-section]").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu?.classList.add("hidden");
+      });
+    });
+
     // Update header background on scroll
     window.addEventListener("scroll", () => {
       const currentScroll = window.scrollY;
       if (header) {
         if (currentScroll > 50) {
-          header.classList.add("bg-base-950/95");
+          header.classList.add("header-scrolled");
         } else {
-          header.classList.remove("bg-base-950/95");
+          header.classList.remove("header-scrolled");
         }
       }
     });
@@ -177,3 +193,13 @@ const navLinks = [
   // Re-run on Astro page transitions
   document.addEventListener("astro:after-swap", initHeader);
 </script>
+
+<style>
+  .header-bg {
+    background-color: color-mix(in srgb, var(--color-base-950) 80%, transparent);
+  }
+
+  .header-scrolled {
+    background-color: color-mix(in srgb, var(--color-base-950) 95%, transparent);
+  }
+</style>

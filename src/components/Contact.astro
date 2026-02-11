@@ -27,13 +27,13 @@ const contactLinks = [
 ];
 ---
 
-<section id="contact" class="py-24 transition-colors">
+<section id="contact" class="py-24 contact-section transition-colors">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-base-50 mb-2">Get In Touch</h2>
+    <h2 class="text-3xl font-bold contact-heading mb-2">Get In Touch</h2>
     <div class="w-20 h-1 bg-accent-500 mb-12"></div>
 
     <div class="max-w-2xl">
-      <p class="text-base-300 text-lg mb-10">
+      <p class="contact-text text-lg mb-10">
         I'm currently looking for opportunities in DevOps and backend
         engineering. Whether you have a question, a project idea, or just want
         to say hi, feel free to reach out!
@@ -46,19 +46,19 @@ const contactLinks = [
               href={link.href}
               target={link.href.startsWith("mailto") ? undefined : "_blank"}
               rel={link.href.startsWith("mailto") ? undefined : "noopener noreferrer"}
-              class="contact-link group flex items-center gap-4 p-4 bg-base-900/50 rounded-xl border border-base-800 hover:border-accent-500/50 transition-all"
+              class="contact-link group flex items-center gap-4 p-4 rounded-xl border transition-all"
             >
-              <div class="p-3 bg-base-800 rounded-lg group-hover:bg-accent-500/20 transition-colors">
+              <div class="p-3 contact-icon-bg rounded-lg group-hover:bg-accent-500/20 transition-colors">
                 <svg
-                  class="w-5 h-5 text-accent-400"
+                  class="w-5 h-5 contact-icon"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   set:html={link.icon}
                 />
               </div>
               <div>
-                <p class="text-sm text-base-500">{link.name}</p>
-                <p class="text-base-200 font-medium group-hover:text-accent-400 transition-colors">
+                <p class="text-sm contact-label">{link.name}</p>
+                <p class="contact-value font-medium group-hover:text-accent-400 transition-colors">
                   {link.value}
                 </p>
               </div>
@@ -69,3 +69,42 @@ const contactLinks = [
     </div>
   </div>
 </section>
+
+<style>
+  .contact-section {
+    background-color: var(--color-base-950);
+  }
+
+  .contact-heading {
+    color: var(--color-base-50);
+  }
+
+  .contact-text {
+    color: var(--color-base-300);
+  }
+
+  .contact-link {
+    background-color: color-mix(in srgb, var(--color-base-900) 50%, transparent);
+    border-color: var(--color-base-800);
+  }
+
+  .contact-link:hover {
+    border-color: color-mix(in srgb, var(--color-accent-500) 50%, transparent);
+  }
+
+  .contact-icon-bg {
+    background-color: var(--color-base-800);
+  }
+
+  .contact-icon {
+    color: var(--color-accent-400);
+  }
+
+  .contact-label {
+    color: var(--color-base-500);
+  }
+
+  .contact-value {
+    color: var(--color-base-200);
+  }
+</style>

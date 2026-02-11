@@ -8,10 +8,10 @@ const { title } = Astro.props;
 
 <details class="my-6 group spoiler-details">
   <summary
-    class="cursor-pointer list-none flex items-center gap-2 p-4 bg-base-800/50 rounded-lg border border-base-700 hover:border-accent-500/30 transition-colors spoiler-summary"
+    class="cursor-pointer list-none flex items-center gap-2 p-4 rounded-lg border transition-colors spoiler-summary"
   >
     <svg
-      class="w-5 h-5 text-accent-400 transition-transform group-open:rotate-90"
+      class="w-5 h-5 spoiler-icon transition-transform group-open:rotate-90"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -22,24 +22,32 @@ const { title } = Astro.props;
         stroke-width="2"
         d="M9 5l7 7-7 7"></path>
     </svg>
-    <span class="font-medium text-base-200 spoiler-title">{title || "Spoiler"}</span>
+    <span class="font-medium spoiler-title">{title || "Spoiler"}</span>
   </summary>
-  <div class="mt-2 p-4 bg-base-800/30 rounded-lg border-l-2 border-accent-500 spoiler-content">
+  <div class="mt-2 p-4 rounded-lg border-l-2 border-accent-500 spoiler-content">
     <slot />
   </div>
 </details>
 
 <style>
-  [data-theme="light"] .spoiler-summary {
-    background-color: var(--color-base-100);
-    border-color: var(--color-base-200);
+  .spoiler-summary {
+    background-color: color-mix(in srgb, var(--color-base-800) 50%, transparent);
+    border-color: var(--color-base-700);
   }
 
-  [data-theme="light"] .spoiler-title {
-    color: var(--color-base-700);
+  .spoiler-summary:hover {
+    border-color: color-mix(in srgb, var(--color-accent-500) 30%, transparent);
   }
 
-  [data-theme="light"] .spoiler-content {
-    background-color: color-mix(in srgb, var(--color-base-100) 50%, transparent);
+  .spoiler-icon {
+    color: var(--color-accent-400);
+  }
+
+  .spoiler-title {
+    color: var(--color-base-200);
+  }
+
+  .spoiler-content {
+    background-color: color-mix(in srgb, var(--color-base-800) 30%, transparent);
   }
 </style>

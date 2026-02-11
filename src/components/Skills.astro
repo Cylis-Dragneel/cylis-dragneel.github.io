@@ -37,28 +37,28 @@ const skillCategories: SkillCategory[] = [
 ];
 ---
 
-<section id="skills" class="py-24 transition-colors">
+<section id="skills" class="py-24 skills-section transition-colors">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-base-50 mb-2">Skills</h2>
+    <h2 class="text-3xl font-bold skills-heading mb-2">Skills</h2>
     <div class="w-20 h-1 bg-accent-500 mb-12"></div>
 
     <div class="grid md:grid-cols-3 gap-8">
       {
         skillCategories.map((category) => (
-          <div class="skill-card bg-base-900/50 rounded-xl p-6 border border-base-800">
-            <h3 class="text-lg font-semibold text-base-100 mb-6">
+          <div class="skill-card rounded-xl p-6 border">
+            <h3 class="text-lg font-semibold skill-card-title mb-6">
               {category.title}
             </h3>
             <div class="space-y-5">
               {category.skills.map((skill) => (
                 <div>
                   <div class="flex justify-between mb-2">
-                    <span class="text-base-300 text-sm font-medium">
+                    <span class="skill-name text-sm font-medium">
                       {skill.name}
                     </span>
-                    <span class="text-base-500 text-sm">{skill.level}%</span>
+                    <span class="skill-percent text-sm">{skill.level}%</span>
                   </div>
-                  <div class="skill-bar-bg h-2 bg-base-800 rounded-full overflow-hidden">
+                  <div class="skill-bar-bg h-2 rounded-full overflow-hidden">
                     <div
                       class:list={["h-full rounded-full skill-bar", skill.color]}
                       style={`--skill-level: ${skill.level}%`}
@@ -107,5 +107,34 @@ const skillCategories: SkillCategory[] = [
   .skill-bar {
     width: 0;
     transition: width 1s ease-out;
+  }
+
+  .skills-section {
+    background-color: var(--color-base-950);
+  }
+
+  .skills-heading {
+    color: var(--color-base-50);
+  }
+
+  .skill-card {
+    background-color: color-mix(in srgb, var(--color-base-900) 50%, transparent);
+    border-color: var(--color-base-800);
+  }
+
+  .skill-card-title {
+    color: var(--color-base-100);
+  }
+
+  .skill-name {
+    color: var(--color-base-300);
+  }
+
+  .skill-percent {
+    color: var(--color-base-500);
+  }
+
+  .skill-bar-bg {
+    background-color: var(--color-base-800);
   }
 </style>

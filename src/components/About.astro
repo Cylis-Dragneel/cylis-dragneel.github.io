@@ -6,26 +6,26 @@ const highlights = [
 ];
 ---
 
-<section id="about" class="py-24 bg-base-900/50 transition-colors">
+<section id="about" class="py-24 about-section transition-colors">
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <h2 class="text-3xl font-bold text-base-50 mb-2">About Me</h2>
+    <h2 class="text-3xl font-bold about-heading mb-2">About Me</h2>
     <div class="w-20 h-1 bg-accent-500 mb-12"></div>
 
     <div class="grid md:grid-cols-2 gap-12 items-center">
       <div class="space-y-6">
-        <p class="text-base-300 text-lg leading-relaxed">
-          I'm <span class="text-accent-400 font-semibold">Taha Ahmad</span>,
-          known more commonly as <span class="text-accent-400 font-semibold"
+        <p class="about-text text-lg leading-relaxed">
+          I'm <span class="text-accent-400 font-semibold about-accent">Taha Ahmad</span>,
+          known more commonly as <span class="text-accent-400 font-semibold about-accent"
             >Cylis</span
           >. I've been using Linux for about 2 years, creating shell scripts to
           automate daily tasks and learning extensively about Unix environments
           and system administration.
         </p>
 
-        <p class="text-base-300 text-lg leading-relaxed">
+        <p class="about-text text-lg leading-relaxed">
           I've worked on various side projects in <span
-            class="text-accent-400 font-medium">Go</span
-          > and <span class="text-accent-400 font-medium">Python</span>, which has
+            class="text-accent-400 font-medium about-accent">Go</span
+          > and <span class="text-accent-400 font-medium about-accent">Python</span>, which has
           led to a growing interest in DevOps and backend engineering. I enjoy building
           tools that solve real problems and make workflows more efficient.
         </p>
@@ -33,7 +33,7 @@ const highlights = [
         <div class="flex flex-wrap gap-3 pt-4">
           {
             highlights.map((item) => (
-              <span class="px-4 py-2 bg-base-800 rounded-full text-sm text-base-200 border border-base-700">
+              <span class="px-4 py-2 about-highlight rounded-full text-sm border">
                 {item.text}
               </span>
             ))
@@ -43,20 +43,20 @@ const highlights = [
 
       <div class="relative">
         <div
-          class="aspect-square rounded-2xl bg-gradient-to-br from-accent-500/20 to-accent-700/20 p-8 border border-accent-500/20"
+          class="terminal-outer aspect-square rounded-2xl p-8 border"
         >
-          <div class="terminal-box h-full rounded-xl bg-base-800/50 p-6 space-y-4">
-            <div class="flex items-center gap-2 text-base-400 font-mono text-sm">
-              <span class="text-accent-400">~</span>
+          <div class="terminal-box h-full rounded-xl p-6 space-y-4">
+            <div class="flex items-center gap-2 terminal-muted font-mono text-sm">
+              <span class="text-accent-400 about-accent">~</span>
               <span>whoami</span>
             </div>
-            <div class="text-base-200 font-mono text-sm pl-4">cylis</div>
+            <div class="terminal-text font-mono text-sm pl-4">cylis</div>
 
-            <div class="flex items-center gap-2 text-base-400 font-mono text-sm">
-              <span class="text-accent-400">~</span>
+            <div class="flex items-center gap-2 terminal-muted font-mono text-sm">
+              <span class="text-accent-400 about-accent">~</span>
               <span>cat interests.txt</span>
             </div>
-            <div class="text-base-200 font-mono text-sm pl-4 space-y-1">
+            <div class="terminal-text font-mono text-sm pl-4 space-y-1">
               <p>- DevOps & Infrastructure</p>
               <p>- Backend Development</p>
               <p>- System Administration</p>
@@ -64,8 +64,8 @@ const highlights = [
               <p>- Anime & Reading</p>
             </div>
 
-            <div class="flex items-center gap-2 text-base-400 font-mono text-sm">
-              <span class="text-accent-400">~</span>
+            <div class="flex items-center gap-2 terminal-muted font-mono text-sm">
+              <span class="text-accent-400 about-accent">~</span>
               <span class="animate-pulse">_</span>
             </div>
           </div>
@@ -74,3 +74,44 @@ const highlights = [
     </div>
   </div>
 </section>
+
+<style>
+  .about-section {
+    background-color: color-mix(in srgb, var(--color-base-900) 50%, transparent);
+  }
+
+  .about-heading {
+    color: var(--color-base-50);
+  }
+
+  .about-text {
+    color: var(--color-base-300);
+  }
+
+  .about-accent {
+    color: var(--color-accent-400);
+  }
+
+  .about-highlight {
+    background-color: var(--color-base-800);
+    color: var(--color-base-200);
+    border-color: var(--color-base-700);
+  }
+
+  .terminal-outer {
+    background: linear-gradient(to bottom right, color-mix(in srgb, var(--color-accent-500) 20%, transparent), color-mix(in srgb, var(--color-accent-700) 20%, transparent));
+    border-color: color-mix(in srgb, var(--color-accent-500) 20%, transparent);
+  }
+
+  .terminal-box {
+    background-color: color-mix(in srgb, var(--color-base-800) 50%, transparent);
+  }
+
+  .terminal-muted {
+    color: var(--color-base-400);
+  }
+
+  .terminal-text {
+    color: var(--color-base-200);
+  }
+</style>

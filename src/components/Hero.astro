@@ -8,41 +8,39 @@ const roles = ["DevOps Engineer", "Backend Developer", "Linux Enthusiast"];
 >
   <!-- Gradient background -->
   <div
-    class="absolute inset-0 bg-gradient-to-br from-base-950 via-base-900 to-base-950"
+    class="absolute inset-0 hero-bg"
   >
     <div
-      class="absolute inset-0 opacity-40"
-      style="background: radial-gradient(ellipse at top right, var(--color-accent-900) 0%, transparent 50%);"
+      class="absolute inset-0 hero-glow-1"
     >
     </div>
     <div
-      class="absolute inset-0 opacity-20"
-      style="background: radial-gradient(ellipse at bottom left, var(--color-accent-800) 0%, transparent 50%);"
+      class="absolute inset-0 hero-glow-2"
     >
     </div>
   </div>
 
   <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <p class="text-accent-400 font-mono text-sm mb-4 tracking-wider">
+    <p class="hero-accent font-mono text-sm mb-4 tracking-wider">
       Hi, my name is
     </p>
 
-    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-base-50 mb-4">
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold hero-title mb-4">
       Taha Ahmad
     </h1>
 
-    <p class="text-2xl sm:text-3xl lg:text-4xl text-base-400 mb-6">
-      aka <span class="text-accent-400 font-semibold">Cylis</span>
+    <p class="text-2xl sm:text-3xl lg:text-4xl hero-subtitle mb-6">
+      aka <span class="hero-accent font-semibold">Cylis</span>
     </p>
 
     <div class="h-8 mb-8">
-      <p class="text-lg sm:text-xl text-base-300">
+      <p class="text-lg sm:text-xl hero-text">
         <span id="typed-text"></span>
-        <span class="animate-pulse text-accent-400">|</span>
+        <span class="animate-pulse hero-accent">|</span>
       </p>
     </div>
 
-    <p class="text-base-400 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
+    <p class="hero-muted max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
       Building reliable infrastructure, automating workflows, and deploying
       solutions. Passionate about Linux, open source, and clean code.
     </p>
@@ -50,13 +48,15 @@ const roles = ["DevOps Engineer", "Backend Developer", "Linux Enthusiast"];
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
       <a
         href="#projects"
+        data-section="projects"
         class="px-8 py-3 bg-accent-500 hover:bg-accent-400 text-base-950 font-semibold rounded-lg transition-colors"
       >
         View My Work
       </a>
       <a
         href="#contact"
-        class="px-8 py-3 border border-accent-500 text-accent-400 hover:bg-accent-500/10 font-semibold rounded-lg transition-colors"
+        data-section="contact"
+        class="px-8 py-3 border border-accent-500 hero-accent hover:bg-accent-500/10 font-semibold rounded-lg transition-colors"
       >
         Get In Touch
       </a>
@@ -66,7 +66,7 @@ const roles = ["DevOps Engineer", "Backend Developer", "Linux Enthusiast"];
   <!-- Scroll indicator -->
   <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
     <svg
-      class="w-6 h-6 text-base-500"
+      class="w-6 h-6 hero-scroll-icon"
       fill="none"
       viewBox="0 0 24 24"
       stroke="currentColor"
@@ -79,6 +79,46 @@ const roles = ["DevOps Engineer", "Backend Developer", "Linux Enthusiast"];
     </svg>
   </div>
 </section>
+
+<style>
+  .hero-bg {
+    background: linear-gradient(to bottom right, var(--color-base-950), var(--color-base-900), var(--color-base-950));
+  }
+
+  .hero-glow-1 {
+    opacity: 0.4;
+    background: radial-gradient(ellipse at top right, var(--color-accent-900) 0%, transparent 50%);
+  }
+
+  .hero-glow-2 {
+    opacity: 0.2;
+    background: radial-gradient(ellipse at bottom left, var(--color-accent-800) 0%, transparent 50%);
+  }
+
+  .hero-title {
+    color: var(--color-base-50);
+  }
+
+  .hero-subtitle {
+    color: var(--color-base-400);
+  }
+
+  .hero-accent {
+    color: var(--color-accent-400);
+  }
+
+  .hero-text {
+    color: var(--color-base-300);
+  }
+
+  .hero-muted {
+    color: var(--color-base-400);
+  }
+
+  .hero-scroll-icon {
+    color: var(--color-base-500);
+  }
+</style>
 
 <script define:vars={{ roles }}>
   function typeWriter() {

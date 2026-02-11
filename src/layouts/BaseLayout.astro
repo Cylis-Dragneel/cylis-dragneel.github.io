@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 interface Props {
   title: string;
   description?: string;
@@ -21,17 +23,59 @@ const { title, description = "DevOps Engineer - Building, Automating, Deploying"
       rel="stylesheet"
     />
     <title>{title}</title>
+    <!-- Theme initialization - MUST run before any content renders to prevent flash -->
+    <script is:inline>
+      (function() {
+        const theme = localStorage.getItem("theme") || "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
   </head>
   <body>
     <slot />
     <script>
-      // Theme initialization - runs before paint to prevent flash
-      const theme = localStorage.getItem("theme") || "dark";
-      document.documentElement.setAttribute("data-theme", theme);
+      // Global smooth scroll handler for section links
+      function initSmoothScroll() {
+        document.querySelectorAll("a[data-section]").forEach(link => {
+          link.addEventListener("click", (e) => {
+            const section = (link as HTMLAnchorElement).dataset.section;
+            if (!section) return;
+            
+            // If on homepage, scroll directly without changing URL
+            if (window.location.pathname === "/") {
+              e.preventDefault();
+              const target = document.getElementById(section);
+              if (target) {
+                target.scrollIntoView({ behavior: "smooth" });
+              }
+            }
+          });
+        });
+
+        // Clean up hash after page load (for cross-page navigation)
+        if (window.location.hash && window.location.pathname === "/") {
+          const section = window.location.hash.slice(1);
+          const target = document.getElementById(section);
+          if (target) {
+            setTimeout(() => {
+              target.scrollIntoView({ behavior: "smooth" });
+              history.replaceState(null, "", window.location.pathname);
+            }, 100);
+          }
+        }
+      }
+
+      initSmoothScroll();
+      document.addEventListener("astro:after-swap", initSmoothScroll);
+    </script>
+    <!-- Preserve theme during View Transitions page swaps -->
+    <script is:inline>
+      document.addEventListener("astro:before-swap", (e) => {
+        const theme = document.documentElement.getAttribute("data-theme");
+        if (theme) {
+          e.newDocument.documentElement.setAttribute("data-theme", theme);
+        }
+      });
     </script>
   </body>
 </html>
-
-<style is:global>
-  @import "../styles/global.css";
-</style>
