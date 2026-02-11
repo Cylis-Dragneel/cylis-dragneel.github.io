@@ -83,6 +83,7 @@ draft: $DRAFT
 import Spoiler from "../../components/blog/Spoiler.astro";
 import Image from "../../components/blog/Image.astro";
 import Callout from "../../components/blog/Callout.astro";
+import Emoji from "../../components/blog/Emoji.astro";
 
 # $TITLE
 
