@@ -587,6 +587,13 @@ code {
   color: #52525b !important;
 }
 
+/* Blog image float clearfix - ensures content after floated images flows correctly */
+article::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /* --- Blog Components: Callout --- */
 [data-theme="light"] .callout {
   border-color: #e4e4e7 !important;

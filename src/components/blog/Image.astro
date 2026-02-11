@@ -5,9 +5,10 @@ interface Props {
   caption?: string;
   size?: "small" | "medium" | "large" | "full";
   position?: "left" | "center" | "right";
+  float?: "left" | "right";
 }
 
-const { src, alt, caption, size = "large", position = "center" } = Astro.props;
+const { src, alt, caption, size = "large", position = "center", float } = Astro.props;
 
 const sizeClasses = {
   small: "max-w-sm",
@@ -24,9 +25,18 @@ const positionClasses = {
 
 // Handle relative paths for blog images
 const imageSrc = src.startsWith("http") ? src : `/blog/img/${src}`;
+
+// When floating, override position and add float classes
+const isFloating = !!float;
+const floatClass = float === "left" ? "image-float-left" : float === "right" ? "image-float-right" : "";
 ---
 
-<figure class:list={["my-8", sizeClasses[size], positionClasses[position]]}>
+<figure class:list={[
+  isFloating ? "image-float" : "my-8",
+  isFloating ? floatClass : "",
+  sizeClasses[size],
+  isFloating ? "" : positionClasses[position],
+]}>
   <img
     src={imageSrc}
     alt={alt}
@@ -42,8 +52,30 @@ const imageSrc = src.startsWith("http") ? src : `/blog/img/${src}`;
   }
 </figure>
 
+{isFloating && <div class="image-float-clear" />}
+
 <style>
   .img-caption {
     color: var(--color-base-400);
+  }
+
+  .image-float {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .image-float-left {
+    float: left;
+    margin-right: 1.5rem;
+  }
+
+  .image-float-right {
+    float: right;
+    margin-left: 1.5rem;
+  }
+
+  /* Clearfix element - hidden by default, placed after float content */
+  .image-float-clear {
+    display: none;
   }
 </style>
