@@ -21,6 +21,11 @@ export async function GET(context: APIContext) {
       categories: post.data.tags,
       author: post.data.author,
     })),
-    customData: `<language>en-us</language>`,
+    customData: `<language>en-us</language>
+<image>
+  <url>${context.site}favicon.ico</url>
+  <title>Cylis - Blog</title>
+  <link>${context.site}</link>
+</image>`,
   });
 }
