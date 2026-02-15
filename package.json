@@ -7,7 +7,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "new-post": "./scripts/new-post.sh"
+    "new-post": "./scripts/new-post.sh",
+    "paste-image": "./scripts/paste-image.sh",
+    "paste-emoji": "./scripts/paste-emoji.sh"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
