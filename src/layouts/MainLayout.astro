@@ -7,12 +7,13 @@ interface Props {
   title: string;
   description?: string;
   currentPage?: string;
+  image?: string;
 }
 
-const { title, description, currentPage } = Astro.props;
+const { title, description, currentPage, image } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} image={image}>
   <Header currentPage={currentPage} />
   <main class="pt-16">
     <slot />
