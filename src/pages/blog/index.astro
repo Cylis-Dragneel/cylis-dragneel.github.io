@@ -34,10 +34,21 @@ function formatDate(date: Date): string {
               <article class="group">
                 <a
                   href={`/blog/${post.slug}`}
-                  class="blog-card block p-6 rounded-xl border transition-all hover:-translate-y-1"
+                  class="blog-card block p-6 rounded-xl border transition-all hover:-translate-y-1 relative overflow-hidden"
                 >
-                  <div class="flex flex-wrap gap-2 mb-3">
-                    {post.data.tags.map((tag) => (
+                  {post.data.banner && (
+                    <div class="blog-card-banner absolute right-0 top-0 bottom-0 w-32 sm:w-48 shrink-0">
+                      <img
+                        src={`/blog/img/${post.data.banner}`}
+                        alt=""
+                        class="w-full h-full object-cover"
+                      />
+                      <div class="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-[var(--theme-bg-secondary)] to-transparent"></div>
+                    </div>
+                  )}
+                  <div class="relative z-10 pr-4 max-w-[calc(100%-8rem)] sm:max-w-[calc(100%-12rem)]">
+                    <div class="flex flex-wrap gap-2 mb-3">
+                      {post.data.tags.map((tag) => (
                       <span class="blog-tag px-2 py-1 text-xs font-mono rounded">
                         {tag}
                       </span>
@@ -56,6 +67,7 @@ function formatDate(date: Date): string {
                     <span>{formatDate(post.data.date)}</span>
                     <span>·</span>
                     <span>by {post.data.author}</span>
+                  </div>
                   </div>
                 </a>
               </article>
