@@ -1,8 +1,26 @@
 ---
-import MainLayout from "../../layouts/MainLayout.astro";
+import MainLayout from "../../../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 
-const posts = (await getCollection("blog", ({ data }) => !data.draft))
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+  const uniqueTags = [...new Set(allPosts.flatMap((post) => post.data.tags))];
+  
+  return uniqueTags.map((tag) => ({
+    params: { tag },
+    props: { tag },
+  }));
+}
+
+interface Props {
+  tag: string;
+}
+
+const { tag } = Astro.props;
+
+const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+const posts = allPosts
+  .filter((post) => post.data.tags.includes(tag))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 function formatDate(date: Date): string {
@@ -14,19 +32,26 @@ function formatDate(date: Date): string {
 }
 ---
 
-<MainLayout title="Blog | Cylis" currentPage="Blog">
+<MainLayout title={`${tag} | Cylis Blog`} currentPage="Blog">
   <section class="blog-list py-24">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h1 class="text-4xl font-bold blog-heading mb-2">Blog</h1>
+      <a href="/blog" class="blog-reset-filter inline-flex items-center gap-2 text-sm mb-6 hover:text-accent-400 transition-colors">
+        <span>←</span>
+        <span>Reset filters</span>
+      </a>
+
+      <h1 class="text-4xl font-bold blog-heading mb-2">
+        <span class="text-accent-400">#</span>{tag}
+      </h1>
       <div class="w-20 h-1 bg-accent-500 mb-6"></div>
       <p class="blog-description text-lg mb-12">
-        Thoughts on tech, reviews, and whatever else I find interesting.
+        {posts.length} {posts.length === 1 ? "post" : "posts"} tagged with "{tag}"
       </p>
 
       {
         posts.length === 0 ? (
           <div class="text-center py-12">
-            <p class="blog-empty">No posts yet. Check back soon!</p>
+            <p class="blog-empty">No posts with this tag yet.</p>
           </div>
         ) : (
           <div class="space-y-8">
@@ -89,6 +114,10 @@ function formatDate(date: Date): string {
 <style>
   .blog-list {
     background-color: var(--theme-bg);
+  }
+
+  .blog-reset-filter {
+    color: var(--theme-text-muted);
   }
 
   .blog-heading {
