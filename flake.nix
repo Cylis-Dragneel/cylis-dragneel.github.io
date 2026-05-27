@@ -2,14 +2,9 @@
   description = "Portfolio website development environment";
 
   inputs.nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";
-  inputs.ai-tools.url = "github:numtide/nix-ai-tools";
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      ai-tools,
-    }:
+    { self, nixpkgs }:
     let
       supportedSystems = [
         "x86_64-linux"
@@ -31,13 +26,7 @@
       devShells = forEachSupportedSystem (
         { pkgs, system }:
         {
-          default = pkgs.mkShell {
-            packages = [
-              pkgs.bun
-              pkgs.git-lfs
-              ai-tools.packages.${system}.crush
-            ];
-          };
+          default = pkgs.mkShell { packages = [ pkgs.bun ]; };
         }
       );
     };

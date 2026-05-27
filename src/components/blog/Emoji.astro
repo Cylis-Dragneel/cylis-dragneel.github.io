@@ -1,16 +1,41 @@
 ---
+import { get } from "node-emoji";
+
 interface Props {
-  src: string;
+  src?: string;
+  name?: string;
   alt?: string;
   size?: string;
 }
 
-const { src, alt = "", size = "1.2em" } = Astro.props;
+const { src, name, alt = "", size = "1.2em" } = Astro.props;
+
+let emojiChar = "";
+let showImg = false;
+
+if (src) {
+  showImg = true;
+} else if (name) {
+  emojiChar = get(name) ?? "";
+  if (!emojiChar) {
+    console.warn(`Unknown emoji shortcode: ${name}`);
+  }
+} else {
+  console.warn("Emoji: provide either src (for Discord emoji) or name (for standard emoji shortcode)");
+}
 ---
 
-<span class="emoji-wrapper">
-  <img src={src} alt={alt} class="emoji-img" style={`height: ${size};`} />
-</span>
+{showImg && (
+  <span class="emoji-wrapper">
+    <img src={src} alt={alt} class="emoji-img" style={`height: ${size};`} />
+  </span>
+)}
+
+{emojiChar && (
+  <span class="emoji-wrapper emoji-native" role="img" aria-label={alt || name}>
+    {emojiChar}
+  </span>
+)}
 
 <style>
   .emoji-wrapper {
@@ -28,6 +53,13 @@ const { src, alt = "", size = "1.2em" } = Astro.props;
     margin: 0;
     padding: 0;
     display: inline-block;
+    position: relative;
+    top: -0.1em;
+  }
+
+  .emoji-native {
+    font-size: 1.2em;
+    line-height: 1;
     position: relative;
     top: -0.1em;
   }
