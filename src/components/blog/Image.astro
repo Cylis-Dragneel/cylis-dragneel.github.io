@@ -1,14 +1,14 @@
 ---
 interface Props {
   src: string;
-  alt: string;
+  alt?: string;
   caption?: string;
   size?: "small" | "medium" | "large" | "full";
   position?: "left" | "center" | "right";
   float?: "left" | "right";
 }
 
-const { src, alt, caption, size = "large", position = "center", float } = Astro.props;
+const { src, alt = "", caption, size = "large", position = "center", float } = Astro.props;
 
 const sizeClasses = {
   small: "max-w-sm",
@@ -24,7 +24,27 @@ const positionClasses = {
 };
 
 // Handle relative paths for blog images
-const imageSrc = src.startsWith("http") ? src : `/blog/img/${src}`;
+const imageSrc = src.startsWith("http://") || src.startsWith("https://") ? src : `/blog/img/${src}`;
+
+const tenorMatch = src.match(/^https?:\/\/(?:www\.)?tenor\.com\/view\/[^/]+-(\d+)(?:\?.*)?$/);
+let tenorGifSrc: string | undefined;
+
+if (tenorMatch) {
+  const tenorApiUrl = new URL("https://g.tenor.com/v1/gifs");
+  tenorApiUrl.searchParams.set("ids", tenorMatch[1]);
+  tenorApiUrl.searchParams.set("key", "LIVDSRZULELA");
+
+  try {
+    const response = await fetch(tenorApiUrl);
+
+    if (response.ok) {
+      const data = await response.json();
+      tenorGifSrc = data?.results?.[0]?.media?.[0]?.gif?.url
+        ?? data?.results?.[0]?.media?.[0]?.tinygif?.url;
+    }
+  } catch {
+  }
+}
 
 // When floating, override position and add float classes
 const isFloating = !!float;
@@ -38,7 +58,7 @@ const floatClass = float === "left" ? "image-float-left" : float === "right" ? "
   isFloating ? "" : positionClasses[position],
 ]}>
   <img
-    src={imageSrc}
+    src={tenorGifSrc ?? imageSrc}
     alt={alt}
     class="rounded-lg shadow-lg w-full"
     loading="lazy"
@@ -78,4 +98,5 @@ const floatClass = float === "left" ? "image-float-left" : float === "right" ? "
   .image-float-clear {
     display: none;
   }
+
 </style>
