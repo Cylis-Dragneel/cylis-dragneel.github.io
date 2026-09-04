@@ -1,0 +1,87 @@
+---
+interface CollageImage {
+  src: string;
+  alt: string;
+  span: number;
+  ratio?: "square" | "portrait" | "landscape";
+}
+
+interface Props {
+  images: CollageImage[];
+  columns?: 3 | 4 | 6;
+}
+
+const { images, columns = 6 } = Astro.props;
+
+const ratios = {
+  square: "1 / 1",
+  portrait: "3 / 4",
+  landscape: "16 / 9",
+};
+
+const tiles = images.map((image) => {
+  const imageSrc = image.src.startsWith("http")
+    ? image.src
+    : `/blog/img/${image.src}`;
+  const span = Math.min(Math.max(Math.round(image.span), 1), columns);
+  const ratio = ratios[image.ratio ?? "landscape"];
+  return {
+    ...image,
+    span,
+    imageSrc,
+    imgStyle: `aspect-ratio: ${ratio};`,
+  };
+});
+---
+
+<div
+  class="collage-grid my-8"
+  style={`grid-template-columns: repeat(${columns}, 1fr);`}
+>
+  {
+    tiles.map((tile) => (
+      <figure class="collage-figure" style={`grid-column: span ${tile.span};`}>
+        <img
+          src={tile.imageSrc}
+          alt={tile.alt}
+          class="collage-img"
+          loading="lazy"
+          style={tile.imgStyle}
+        />
+      </figure>
+    ))
+  }
+</div>
+
+<style>
+  .collage-grid {
+    display: grid;
+    gap: 0.75rem;
+    grid-auto-flow: row dense;
+    align-items: start;
+  }
+
+  .collage-figure {
+    margin: 0;
+    line-height: 0;
+    align-self: start;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background-color: var(--theme-bg-tertiary, #1a1a2e);
+  }
+
+  /* Beat .prose-content img { margin: 2rem 0 } so collage images sit flush
+     (no top/bottom padding on each tile). */
+  .collage-figure .collage-img.collage-img {
+    margin: 0;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .collage-figure:hover .collage-img {
+    transform: scale(1.04);
+  }
+</style>

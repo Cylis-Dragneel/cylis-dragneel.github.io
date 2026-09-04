@@ -6,9 +6,10 @@ interface Props {
   size?: "small" | "medium" | "large" | "full";
   position?: "left" | "center" | "right";
   float?: "left" | "right";
+  height?: string;
 }
 
-const { src, alt = "", caption, size = "large", position = "center", float } = Astro.props;
+const { src, alt = "", caption, size = "large", position = "center", float, height } = Astro.props;
 
 const sizeClasses = {
   small: "max-w-sm",
@@ -61,6 +62,7 @@ const floatClass = float === "left" ? "image-float-left" : float === "right" ? "
     src={tenorGifSrc ?? imageSrc}
     alt={alt}
     class="rounded-lg shadow-lg w-full"
+    style={height ? `max-height: ${height}; width: auto; margin: 0 auto; display: block; height: auto;` : undefined}
     loading="lazy"
   />
   {
